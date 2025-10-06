@@ -74,6 +74,15 @@ truncate table nilai restart identity;
 -- menghapus database
 drop database sekolah;
 
+-------------------------------------------------------------------------------------------------------------
 
+-- Tambah query 1 --
+
+-- query untuk mencari nilai tertinggi setiap siswa
+
+select siswa.nama, max(nilai.nilai) as nilai_tertinggi_siswa
+from siswa
+join nilai on siswa.id = nilai.id_siswa
+group by siswa.nama;
 
 
