@@ -91,3 +91,9 @@ select siswa.nama, count(nilai.mata_pelajaran) as jumlah_mapel
 from siswa
 join nilai on siswa.id = nilai.id_siswa
 group by siswa.nama;
+
+-- query untuk menghitung jumlah siswa yang ada di setiap jurusan
+
+select jurusan, count(id) AS jumlah_siswa
+from siswa
+group by jurusan;
